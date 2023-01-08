@@ -1,22 +1,26 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import DragNDrop from './components/DragNDrop';
+
+
+const data = [
+  {title: 'task 1', task: 'description', due: 'due date', completed: 'boolean'},
+  {title: 'task 2', task: 'description', due: 'due date', completed: 'boolean'},
+  {title: 'task 3', task: 'description', due: 'due date', completed: 'boolean'},
+  {title: 'task 4', task: 'description', due: 'due date', completed: 'boolean'},
+  {title: 'task 5', task: 'description', due: 'due date', completed: 'boolean'},
+  {title: 'task 6', task: 'description', due: 'due date', completed: 'boolean'},
+  {title: 'task 7', task: 'description', due: 'due date', completed: 'boolean'}
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <div className='title'>
+        <h1>TaskTime</h1>
+      </div>
+      <header class="App-header">
+        <DragNDrop data={data}/>
       </header>
     </div>
   );
